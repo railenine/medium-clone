@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import TopBar from './components/topBar/TopBar';
 
 import Routes from './Routes';
 
 const App = () => {
   return (
     <div>
-      <h3>Welcome to Hooks!</h3>
+      <Router>
+        <TopBar />
+        <Routes />
+      </Router>
     </div>
   )
 }
@@ -16,9 +20,5 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <Router>
-      <Routes />
-    </Router>
   </React.StrictMode>
 );
-

@@ -14,7 +14,7 @@ const CurrentUserChecker = ({children}) => {
         if(!token) {
             setCurrentUserState(state => ({
                 ...state,
-                isLoggenIn: false
+                isLoggedIn: false
             }))
             return
         }
@@ -34,7 +34,7 @@ const CurrentUserChecker = ({children}) => {
 
         setCurrentUserState(state => ({
             ...state,
-            isLoggenIn: true,
+            isLoggedIn: true,
             isLoading: false,
             currentUser: response.user
         }))

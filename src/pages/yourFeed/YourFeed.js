@@ -10,7 +10,7 @@ import Loading from "../../components/loading/loading";
 import ErrorMessage from "../../components/errorMessage/errorMessage";
 import FeedToggler from "../../components/feedToggler/feedToggler";
 
-const GlobalFeed = (props) => {
+const YourFeed = (props) => {
     
     const {offset, currentPage} = getPaginator(props.location.search);
     const stringifiedParams = stringify({
@@ -18,7 +18,7 @@ const GlobalFeed = (props) => {
         offset
     });
     const url = props.match.url;
-    const apiUrl = `/articles?${stringifiedParams}`;
+    const apiUrl = `/articles/feed?${stringifiedParams}`;
     const [{response, isLoading, error}, doFetch] = useFetch(apiUrl);
 
     useEffect(() => {
@@ -55,4 +55,4 @@ const GlobalFeed = (props) => {
     )
 }
 
-export default GlobalFeed;
+export default YourFeed;

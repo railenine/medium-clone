@@ -5,7 +5,6 @@ const BackendErrorMessages = ({backendErrors}) => {
         const messages = backendErrors[name].join(' ')
         return `${name} ${messages}`
     })
-    console.log(errMsges)
     return <ul className='error-messages'>
         {errMsges.map(errMsg => (
             <li key={errMsg}>{errMsg}</li>

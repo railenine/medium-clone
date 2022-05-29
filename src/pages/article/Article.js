@@ -45,7 +45,7 @@ const Article = (props) => {
                         <div className="col-xs-12">
                             <div>
                                 <p>
-                                    {response.article.tagList}
+                                    {response.article.body}
                                 </p>
                             </div>
                             <TagList tags={response.article.tagList} />

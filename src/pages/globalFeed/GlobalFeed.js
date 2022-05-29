@@ -1,4 +1,4 @@
-import { useEffect,Fragment } from "react";
+import { useEffect, Fragment } from "react";
 import { stringify } from "query-string";
 
 import Feed from "../../components/feed/feed";
@@ -42,7 +42,11 @@ const GlobalFeed = (props) => {
                         {!isLoading && response && (
                             <Fragment>
                                 <Feed articles={response.articles} />
-                                <Pagination total={response.articlesCount} limit={limit} url={url} currentPage={currentPage} />
+                                <Pagination 
+                                    total={response.articlesCount} 
+                                    limit={limit} 
+                                    url={url} 
+                                    currentPage={currentPage} />
                             </Fragment>
                         )}
                     </div>
